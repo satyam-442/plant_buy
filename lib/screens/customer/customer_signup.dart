@@ -7,6 +7,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:plant_buy/constants/constant.dart';
 import 'package:plant_buy/controller/customer_controller.dart';
 import 'package:plant_buy/screens/customer/customer_dashboard.dart';
+import 'package:plant_buy/screens/customer/customer_phone_verify.dart';
 import 'package:plant_buy/widgets/text_wgt.dart';
 
 enum PageState{init, process, done}
@@ -198,10 +199,11 @@ class CustomerSignup extends GetView<CustomerController> {
                   ),
                   InkWell(
                     onTap: () {
-                      if (formKey.currentState!.validate()) {
+                      Get.to(() => CustomerPhoneVerify());
+                      /*if (formKey.currentState!.validate()) {
                         SignUpUser();
-                        /*Get.to(() => CustomerDashboard());*/
-                      }
+                        *//*Get.to(() => CustomerDashboard());*//*
+                      }*/
                     },
                     child: Container(
                       margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
